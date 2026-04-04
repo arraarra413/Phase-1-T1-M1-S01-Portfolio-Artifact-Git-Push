@@ -1,0 +1,8 @@
+--- IP ROUTE EVIDENCE ---
+default via 10.88.0.1 dev eth0 
+10.88.0.0/16 dev eth0 proto kernel scope link src 10.88.0.4 
+172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 linkdown 
+192.168.10.0/24 dev eth0 proto kernel scope link src 192.168.10.15 
+
+--- HANDSHAKE EVIDENCE ---
+

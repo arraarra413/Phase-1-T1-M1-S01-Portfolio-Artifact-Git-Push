@@ -1,0 +1,24 @@
+y
+==================================================
+SESSION 16: READINESS INVENTORY
+==================================================
+Operator: [Aaron Ross]
+Date: [5/29/25]
+Fixed file permissions on broken_script.sh with chmod 755.
+Cleared port conflicts on port 8080 by removing the ghost_web and distracted_pare containers.
+
+Confidence Audit (Yes/No):
+1. Nmap (Network Scanning): [YES]
+2. Docker (Containerization): [YES]
+3. Linux Hardening (UFW/chmod): [NO]
+4. VS Code Remote-SSH: [ ]
+
+Identify your weakest area and your plan to review it:
+[Eval: Spent way too much time down a rabbit hole of worry - 2 hr 15 min- to be exact- of trying to figure out both how to go about the assignments; how to integrate the workflow; how to workaround 4 Gig and no VSC constraints, rather than just trying to work and using Google Cloud Shell and allowing for roadblocks PLAN: Review previous material until in long term memory/set a timer for every work period/DONT OVER RESEARCH OVER PREPARE OR WORRY EXCESSIVELY]
+
+Anomaly 1 (Layer 7): Diagnosed an application permission failure (----------) on ~/forge_v1/broken_script.sh. Re-established operational access parity using chmod 755, restoring the application execution lifecycle ([+] Heartbeat Detected).
+
+Anomaly 2 (Layer 4): Evaluated socket bind infrastructure failures on port 8080 using ss -tlnp and docker ps. Discovered multiple unauthorized processes occupying network ports (ghost_web and distracted_pare). Cleared the local binding paths with docker rm -f to cleanly route production web server proxies on port 8080:80.
+
+Anomaly 3 (Layer 3): Analyzed outbound Internet Control Message Protocol (ping) routing layers. Verified edge connectivity metrics directly inside the cloud container host layout architecture without localized kernel packet dropping restrictions.
+==================================================

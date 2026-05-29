@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  wiki:
+    image: nginx:latest
+    container_name: wiki_frontend
+    ports:
+      - "8080:80"
+    networks:
+      - frontend
+      - backend
+    restart: always
+
+  db:
+    image: mysql:latest
+    container_name: db_backend
+    environment:
+      MYSQL_ROOT_PASSWORD: SecurePassword123!
+    networks:
+      - backend
+    restart: always
+
+networks:
+  frontend:
+  backend:
+    internal: true
